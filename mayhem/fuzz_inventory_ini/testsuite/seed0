@@ -1,0 +1,9 @@
+[web]
+web[01:03].example.com ansible_port=2222
+foo ansible_host=10.0.0.1
+
+[web:vars]
+x=1
+
+[all:children]
+web

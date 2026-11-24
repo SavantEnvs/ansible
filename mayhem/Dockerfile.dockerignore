@@ -1,0 +1,4 @@
+# Build-context pruning for mayhem/Dockerfile (.git is kept: the image must hold the full history).
+**/__pycache__
+**/*.pyc
+ctrf-report.json

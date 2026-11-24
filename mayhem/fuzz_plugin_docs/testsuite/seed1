@@ -1,0 +1,7 @@
+DOCUMENTATION:
+  module: foo
+  short_description: bar
+EXAMPLES: |
+  - foo:
+RETURN:
+  r: {description: x}

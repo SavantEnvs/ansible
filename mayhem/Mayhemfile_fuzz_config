@@ -1,0 +1,12 @@
+# Mayhem target: fuzz_config (Atheris/libFuzzer harness mayhem/harnesses/fuzz_config.py, run via the ELF launcher).
+project: savantenvs/ansible
+target: fuzz_config
+
+cmds:
+  - cmd: /mayhem/fuzz_config
+    libfuzzer: true
+    timeout: 20
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_config/testsuite

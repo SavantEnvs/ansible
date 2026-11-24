@@ -1,0 +1,4 @@
+[web]
+hosts.h1 = { a = 1 }
+vars = { x = "y" }
+[db.hosts.db1]

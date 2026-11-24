@@ -1,0 +1,12 @@
+# Mayhem target: fuzz_json_profiles (Atheris/libFuzzer harness mayhem/harnesses/fuzz_json_profiles.py, run via the ELF launcher).
+project: savantenvs/ansible
+target: fuzz_json_profiles
+
+cmds:
+  - cmd: /mayhem/fuzz_json_profiles
+    libfuzzer: true
+    timeout: 20
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_json_profiles/testsuite

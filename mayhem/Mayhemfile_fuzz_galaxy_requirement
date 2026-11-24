@@ -1,0 +1,12 @@
+# Mayhem target: fuzz_galaxy_requirement (Atheris/libFuzzer harness mayhem/harnesses/fuzz_galaxy_requirement.py, run via the ELF launcher).
+project: savantenvs/ansible
+target: fuzz_galaxy_requirement
+
+cmds:
+  - cmd: /mayhem/fuzz_galaxy_requirement
+    libfuzzer: true
+    timeout: 20
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_galaxy_requirement/testsuite

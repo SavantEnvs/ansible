@@ -1,0 +1,16 @@
+- hosts: all
+  gather_facts: no
+  vars:
+    a: 1
+  tasks:
+    - name: t
+      debug: msg={{ a }}
+      when: a == 1
+      loop: [1, 2]
+    - block:
+        - command: echo hi
+      rescue:
+        - fail:
+  handlers:
+    - name: h
+      ping:

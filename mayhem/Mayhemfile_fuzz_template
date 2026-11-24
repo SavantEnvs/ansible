@@ -1,0 +1,12 @@
+# Mayhem target: fuzz_template (Atheris/libFuzzer harness mayhem/harnesses/fuzz_template.py, run via the ELF launcher).
+project: savantenvs/ansible
+target: fuzz_template
+
+cmds:
+  - cmd: /mayhem/fuzz_template
+    libfuzzer: true
+    timeout: 20
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_template/testsuite
